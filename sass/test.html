@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    a {
+        color: #0000ff;
+        text-decoration: none;
+    }
+    
+    a::before {
+        content: '🔗';
+    }
+    
+    .local-link::before {
+        content: url('../../media/examples/firefox-logo.svg');
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    } 
+</style>
+<body>
+
+    <p>Learning resources for web developers can be found all over the internet. Try out <a href="https://web.dev/">web.dev</a>, <a href="https://www.w3schools.com/">w3schools.com</a> or our <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.</p>
+
+    
+</body>
+</html>

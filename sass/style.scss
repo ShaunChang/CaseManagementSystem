@@ -1,0 +1,125 @@
+    $fontsize:12px;
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @mixin navIcon {
+        width: auto;
+        height: 2.2*$fontsize;
+        padding-right: 2*$fontsize;
+    }
+
+    body{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-image: url(../images/bg.png);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .nav{
+        display: flex;
+        width: 100%;
+        height: 4*$fontsize;
+        margin-top: 5.1*$fontsize;
+        background-color: rgba(202, 200, 227, 0.1);
+        background-image: url(../images/logobg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: space-between;
+        &__logo{
+            display: flex;
+            align-items: center;
+            &--logoImag{
+                margin-left: 2*$fontsize;
+                height: 5*$fontsize;
+                justify-self: flex-start;
+            }
+            &--logoWords{
+                margin-left: 2*$fontsize;
+                color: white;
+                font-size: 2.5*$fontsize;
+            }
+            &--address{
+                margin-left: 1.6*$fontsize;
+                font-size: 1.6*$fontsize;
+                color: white;
+                
+            }
+        }
+        &__login{
+            display: flex;
+            align-items: center;
+            &--notification{
+                @include navIcon();
+            }
+            &--loginMag{
+                @include navIcon();
+            }
+            &--setting{
+                @include navIcon();
+            }
+        }
+    }
+
+    .content{
+        margin-top: 7*$fontsize;
+        background-color: rgba(27, 16, 183, 0);
+        width: 100%;
+        height: 500px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        &__search{
+            background-color: rgba(69, 58, 222, 0.7);
+            border-radius: 6*$fontsize;
+            height: 4*$fontsize;
+            width: 50*$fontsize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &--logo{
+                @include navIcon(); 
+            }
+
+            &--type{
+                width: 29*$fontsize;
+                background-color: rgba(27, 16, 183, 0.5);
+            }
+            
+        }
+        &__cards{
+            margin-top: 3*$fontsize;
+            // background-color: black;
+            display: grid;
+            grid-template-columns: repeat(12,4.5*$fontsize);
+            grid-gap: 2.5*$fontsize;
+            
+            &--card{
+                background-color: rgba(#845EC2, 0.7);
+                border-radius: 2*$fontsize;
+                grid-column-end: span 4;
+                width: 100%;
+                height: 16*$fontsize;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                transition: all 0.3 ease 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                &:hover{
+                    transform: translateY(-1*$fontsize);
+                }
+            }
+        }
+
+    }

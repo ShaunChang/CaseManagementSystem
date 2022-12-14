@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+
+window.onload=function(){
+
+    display=function(){
+        var divObj=document.getElementById("cxc")
+        divObj.innerHTML=window.setInterval(new Date().toLocaleString,1000)
+    }
+
+
+    start=function(){
+        v=window.setInterval(display,1000)
+    }
+
+    stop=function(){
+        window.clearInterval(v)
+    }
+
+    var divObj=document.getElementById("kaishi")
+    divObj.onclick=start
+    var divObj2=document.getElementById("stop")
+    divObj2.onclick=stop
+}
+</script>
+<body>
+    <input type="button" value="kaishi" id="kaishi">
+    <input type="button" value="jiehsu" id="stop">
+    <div id="cxc"></div>
+
+</body>
+</html>
