@@ -68,7 +68,7 @@
     }
 
     .content{
-        margin-top: 7*$fontsize;
+        margin-top: 12*$fontsize;
         background-color: rgba(27, 16, 183, 0);
         width: 100%;
         height: 500px;
@@ -77,49 +77,72 @@
         flex-direction: column;
         flex-wrap: wrap;
         &__search{
+            margin-top: 2*$fontsize;
             background-color: rgba(69, 58, 222, 0.7);
+            margin-bottom: 5`*$fontsize;
             border-radius: 6*$fontsize;
             height: 4*$fontsize;
             width: 50*$fontsize;
             display: flex;
             align-items: center;
             justify-content: center;
-
             &--logo{
                 @include navIcon(); 
             }
-
             &--type{
                 width: 29*$fontsize;
                 background-color: rgba(27, 16, 183, 0.5);
-            }
-            
+            } 
         }
         &__cards{
-            margin-top: 3*$fontsize;
+            
             // background-color: black;
             display: grid;
-            grid-template-columns: repeat(12,4.5*$fontsize);
-            grid-gap: 2.5*$fontsize;
+            grid-template-columns: repeat(16,2*$fontsize);
+            grid-gap: 4*$fontsize;
             
             &--card{
+                border: 1px solid;
+                border-color: #9a79d0;
                 background-color: rgba(#845EC2, 0.7);
-                border-radius: 2*$fontsize;
-                grid-column-end: span 4;
+                border-radius: 1*$fontsize;
+                grid-column-start: span 4;
                 width: 100%;
                 height: 16*$fontsize;
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 flex-direction: column;
                 cursor: pointer;
                 transition: all 0.3 ease 0;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
+            
                 &:hover{
-                    transform: translateY(-1*$fontsize);
+                    box-shadow: 0 0 10px rgb(0,153,184) inset,0 0 30px rgb(0,153,184);
                 }
             }
         }
 
     }
+
+    .badge{ 
+        width: 100%;
+        height: 40*$fontsize;
+        margin-top: 15*$fontsize;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__badgeContainer{
+            width: 33*$fontsize;
+            height: 34*$fontsize;
+            & img{
+                width: 100%;
+                height: 100%;
+                transition: all 0.3 ease 0;
+                &:hover{
+                    transform: translateY(-1*$fontsize);
+                }
+            }
+        }
+       
+    }
+
