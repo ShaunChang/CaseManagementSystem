@@ -1,59 +1,207 @@
-/*
-Error: Invalid CSS after "...argin-bottom: 5": expected ";", was "`*$fontsize;"
-        on line 82 of sass/style.scss
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-77:         flex-direction: column;
-78:         flex-wrap: wrap;
-79:         &__search{
-80:             margin-top: 2*$fontsize;
-81:             background-color: rgba(69, 58, 222, 0.7);
-82:             margin-bottom: 5`*$fontsize;
-83:             border-radius: 6*$fontsize;
-84:             height: 4*$fontsize;
-85:             width: 50*$fontsize;
-86:             display: flex;
-87:             align-items: center;
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(../images/bg.png);
+  display: flex;
+  flex-wrap: wrap; }
 
-Backtrace:
-sass/style.scss:82
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...argin-bottom: 5\": expected \";\", was \"`*$fontsize;\"\A         on line 82 of sass/style.scss\A \A 77:         flex-direction: column;\A 78:         flex-wrap: wrap;\A 79:         &__search{\A 80:             margin-top: 2*$fontsize;\A 81:             background-color: rgba(69, 58, 222, 0.7);\A 82:             margin-bottom: 5`*$fontsize;\A 83:             border-radius: 6*$fontsize;\A 84:             height: 4*$fontsize;\A 85:             width: 50*$fontsize;\A 86:             display: flex;\A 87:             align-items: center;"; }
+.nav {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  margin-top: 61.2px;
+  background-color: rgba(202, 200, 227, 0.1);
+  background-image: url(../images/logobg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: space-between; }
+  .nav__logo {
+    display: flex;
+    align-items: center; }
+    .nav__logo--logoImag {
+      margin-left: 24px;
+      height: 60px;
+      justify-self: flex-start; }
+    .nav__logo--logoWords {
+      margin-left: 24px;
+      color: white;
+      font-size: 30px; }
+    .nav__logo--address {
+      margin-left: 19.2px;
+      font-size: 19.2px;
+      color: white; }
+  .nav__login {
+    display: flex;
+    align-items: center; }
+    .nav__login--notification {
+      width: auto;
+      height: 26.4px;
+      padding-right: 24px; }
+    .nav__login--loginMag {
+      width: auto;
+      height: 26.4px;
+      padding-right: 24px; }
+    .nav__login--setting {
+      width: auto;
+      height: 26.4px;
+      padding-right: 24px; }
+
+.content {
+  margin-top: 144px;
+  background-color: rgba(27, 16, 183, 0);
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .content__search {
+    margin-top: 24px;
+    background-color: rgba(69, 58, 222, 0.7);
+    margin-bottom: 60px;
+    border-radius: 72px;
+    height: 48px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .content__search--logo {
+      width: auto;
+      height: 26.4px;
+      padding-right: 24px; }
+    .content__search--type {
+      width: 348px;
+      background-color: rgba(27, 16, 183, 0.5); }
+  .content__cards {
+    display: grid;
+    grid-template-columns: repeat(16, 24px);
+    grid-gap: 48px; }
+    .content__cards--card {
+      border: 1px solid;
+      border-color: #9a79d0;
+      background-color: rgba(132, 94, 194, 0.7);
+      border-radius: 12px;
+      grid-column-start: span 4;
+      width: 100%;
+      height: 192px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.3 ease 0; }
+      .content__cards--card:hover {
+        box-shadow: 0 0 10px #0099b8 inset, 0 0 30px #0099b8; }
+
+.badge {
+  width: 100%;
+  height: 480px;
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .badge__badgeContainer {
+    width: 396px;
+    height: 408px; }
+    .badge__badgeContainer img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3 ease 0; }
+      .badge__badgeContainer img:hover {
+        transform: translateY(-12px); }
+
+#notification {
+  transition: all 0.3 ease 0; }
+  #notification:hover {
+    transform: translateY(-3.6px); }
+
+.diagramPreview {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center; }
+  .diagramPreview__container {
+    width: 100%;
+    height: 360px;
+    background-color: rgba(23, 86, 111, 0.5);
+    box-shadow: 0 0 10px #0099b8 inset, 0 0 30px #0099b8;
+    margin-top: 120px; }
+    .diagramPreview__container--close {
+      display: flex;
+      flex-direction: row-reverse; }
+      .diagramPreview__container--close div {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgba(79, 134, 201, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+    .diagramPreview__container--diagrams {
+      height: 324px;
+      display: grid;
+      grid-template-columns: 1fr repeat(12, 48px) 1fr;
+      grid-gap: 36px; }
+      .diagramPreview__container--diagrams .container {
+        display: grid;
+        grid-column: 2 / span 12;
+        grid-template-columns: repeat(12, 48px);
+        grid-gap: 36px;
+        justify-items: center;
+        align-items: center; }
+        .diagramPreview__container--diagrams .container__circleAndWord {
+          grid-column-start: span 3;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .diagramPreview__container--diagrams .container__circleAndWord--alarmCircle {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 144px;
+            width: 144px;
+            -moz-border-radius: 144px;
+            -webkit-border-radius: 144px;
+            border-radius: 144px;
+            background: #e04aee;
+            -webkit-box-shadow: 10px 10px 99px 6px #f038ff;
+            -moz-box-shadow: 10px 10px 99px 6px #bb57c5;
+            box-shadow: 10px 10px 99px 6px #e5b1e9; }
+          .diagramPreview__container--diagrams .container__circleAndWord--circle {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 144px;
+            width: 144px;
+            -moz-border-radius: 144px;
+            -webkit-border-radius: 144px;
+            border-radius: 144px;
+            background: #6c12a8;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; }
+            .diagramPreview__container--diagrams .container__circleAndWord--circle:hover {
+              background-color: #b9e769;
+              -webkit-box-shadow: 10px 10px 99px 6px #b9e769;
+              -moz-box-shadow: 10px 10px 99px 6px #b9e769;
+              box-shadow: 10px 10px 99px 6px #b9e769; }
+          .diagramPreview__container--diagrams .container__circleAndWord--word {
+            margin-top: 36px;
+            color: white; }
+
+/*# sourceMappingURL=style.css.map */

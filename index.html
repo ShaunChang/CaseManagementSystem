@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
+<script type="text/javascript">
+    window.onload=function(){
+        var diagramClo=window.document.getElementById("diagramCloser")
+        var notification=window.document.getElementById("notification")
 
+        diagramClo.onclick=function(){
+            document.getElementById("diagramPreview").style.display='none'
+        }
+        notification.onclick=function(){
+            document.getElementById("diagramPreview").style.display='flex'
+        }
 
-
-
-
+    }
+</script>
 <body> 
     <nav class="nav">
         <div class="nav__logo">
@@ -21,23 +29,39 @@
             <div class="nav__logo--address">白银市烟草专卖局</div>
         </div>
         <div class="nav__login">
-            <img src="images/bell.png" alt="notification" class="nav__login--notification">
+            <img id="notification" src="images/bell.png" alt="notification" class="nav__login--notification">
             <img src="images/user.png" alt="" class="nav__login--loginMag">
             <img src="images/setting.png" alt="" class="nav__login--setting">
         </div>
     </nav>
+
+    <section id="diagramPreview" class="diagramPreview">
+        <div id="diagramPreview__container" class="diagramPreview__container">
+            <div class="diagramPreview__container--close">
+                <div id="diagramCloser">X</div>
+            </div>
+            <div class="diagramPreview__container--diagrams">
+                <div class="container">
+                    <div class="container__circleAndWord"> <div class="container__circleAndWord--circle">1999</div><p class="container__circleAndWord--word">卷宗总数</p></div>
+                    <div class="container__circleAndWord"> <div class="container__circleAndWord--circle">1500</div><p class="container__circleAndWord--word">行政处罚卷数</p></div>
+                    <div class="container__circleAndWord"> <div class="container__circleAndWord--circle">499</div><p class="container__circleAndWord--word">许可卷数</p></div>
+                    <div class="container__circleAndWord"> <div class="container__circleAndWord--alarmCircle">260</div><p class="container__circleAndWord--word">借阅卷宗数</p></div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
     <section class="content">
         <div class="content__search">
             <img class="content__search--logo" src="images/search.png" alt="search">
             <input class="content__search--type" type="text" placeholder="输入卷宗关键字查询...">
         </div>
         <div class="content__cards">
-            <div class="content__cards--card"></div>
-            <div class="content__cards--card"></div>
-            <div class="content__cards--card"></div>
-            <div class="content__cards--card"></div>
-            <div class="content__cards--card"></div>
-            <div class="content__cards--card"></div>
+            <div class="content__cards--card">卷宗入库</div>
+            <div class="content__cards--card">卷宗核销</div>
+            <div class="content__cards--card">卷宗借阅</div>
+            <div class="content__cards--card">卷宗归还</div>
         </div>
     </section>
 </body>

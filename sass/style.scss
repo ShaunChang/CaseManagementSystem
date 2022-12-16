@@ -12,6 +12,25 @@
         padding-right: 2*$fontsize;
     }
 
+    @mixin flexCenter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @mixin circleStyle{
+        font-size: 1.5*$fontsize;
+        font-weight: 700;
+        color: white;
+        @include flexCenter();
+        height: 12*$fontsize;
+        width: 12*$fontsize;
+        -moz-border-radius: 12*$fontsize;
+        -webkit-border-radius:12*$fontsize;
+        border-radius: 12*$fontsize;
+        
+    }
+
     body{
         background-position: center center;
         background-repeat: no-repeat;
@@ -79,7 +98,7 @@
         &__search{
             margin-top: 2*$fontsize;
             background-color: rgba(69, 58, 222, 0.7);
-            margin-bottom: 5`*$fontsize;
+            margin-bottom: 5*$fontsize;
             border-radius: 6*$fontsize;
             height: 4*$fontsize;
             width: 50*$fontsize;
@@ -142,7 +161,85 @@
                     transform: translateY(-1*$fontsize);
                 }
             }
-        }
-       
+        }  
     }
 
+    #notification{
+        transition: all 0.3 ease 0;
+        &:hover{
+            transform: translateY(-0.3*$fontsize);
+        }
+    }
+
+    .diagramPreview{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        &__container{
+            width: 100%;
+            height: 30*$fontsize;
+            background-color: rgba(23, 86, 111, 0.5);
+            box-shadow: 0 0 10px rgb(0,153,184) inset,0 0 30px rgb(0,153,184);
+            margin-top: 10*$fontsize;
+            &--close{
+                display: flex;
+                flex-direction: row-reverse;
+                & div{
+                    width: 2*$fontsize;
+                    height: 2*$fontsize;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background-color: rgba(79, 134, 201, 0.5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            &--diagrams{
+                height: 27*$fontsize;
+                display: grid;
+                grid-template-columns: 1fr  repeat(12,4*$fontsize) 1fr;
+                grid-gap: 3*$fontsize;
+                & .container{
+                    display: grid;
+                    grid-column: 2 / span 12;
+                    grid-template-columns: repeat(12,4*$fontsize);
+                    grid-gap: 3*$fontsize;
+                    justify-items: center;
+                    align-items: center;
+                    &__circleAndWord{
+                        grid-column-start: span 3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        &--alarmCircle{
+                            @include circleStyle();
+                            background: rgb(224, 74, 238); 
+                            -webkit-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+                            -moz-box-shadow: 10px 10px 99px 6px rgb(187, 87, 197);
+                            box-shadow: 10px 10px 99px 6px rgb(229, 177, 233);
+                        }
+                        &--circle{
+                            @include circleStyle();
+                            background: rgb(108, 18, 168); 
+                            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+                            &:hover{
+                                background-color: #b9e769;
+                                -webkit-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+                                -moz-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+                                box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+                            }
+                        }
+                        &--word{
+                            margin-top: 3*$fontsize;
+                            color: white;
+                        }
+                    }    
+                }
+            }
+        }
+    }
