@@ -16,7 +16,7 @@ body {
   display: flex;
   width: 100%;
   height: 48px;
-  margin-top: 61.2px;
+  margin-top: 36px;
   background-color: rgba(202, 200, 227, 0.1);
   background-image: url(../images/logobg.png);
   background-repeat: no-repeat;
@@ -52,6 +52,46 @@ body {
       width: auto;
       height: 26.4px;
       padding-right: 24px; }
+    .nav__login--index {
+      margin-right: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .nav__login--index button {
+        width: 96px;
+        height: 39.6px;
+        border-radius: 12px;
+        background: transparent;
+        background-color: rgba(88, 32, 185, 0.5);
+        color: white;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .nav__login--index span {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        font-size: 15.6px;
+        font-weight: 700;
+        z-index: 20; }
+      .nav__login--index :after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -36px;
+        left: -100px;
+        background: white;
+        width: 50px;
+        height: 125px;
+        opacity: 20%;
+        transform: rotate(-45deg); }
+      .nav__login--index :hover :after {
+        left: 140%;
+        transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
+        -webkit-transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1); }
 
 .content {
   margin-top: 144px;
@@ -103,18 +143,18 @@ body {
 .badge {
   width: 100%;
   height: 480px;
-  margin-top: 180px;
+  margin-top: 120px;
   display: flex;
   justify-content: center;
   align-items: center; }
   .badge__badgeContainer {
-    width: 396px;
-    height: 408px; }
+    width: 360px;
+    height: 360px; }
     .badge__badgeContainer img {
       width: 100%;
       height: 100%;
       transition: all 0.3 ease 0; }
-      .badge__badgeContainer img:hover {
+      .badge__badgeContainer img:active {
         transform: translateY(-12px); }
 
 #notification {
@@ -123,85 +163,200 @@ body {
     transform: translateY(-3.6px); }
 
 .diagramPreview {
-  display: none;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 9600px;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center; }
-  .diagramPreview__container {
+  .diagramPreview__Container {
     width: 100%;
-    height: 360px;
+    height: 600px;
     background-color: rgba(23, 86, 111, 0.5);
     box-shadow: 0 0 10px #0099b8 inset, 0 0 30px #0099b8;
     margin-top: 120px; }
-    .diagramPreview__container--close {
-      display: flex;
-      flex-direction: row-reverse; }
-      .diagramPreview__container--close div {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        cursor: pointer;
-        background-color: rgba(79, 134, 201, 0.5);
+    .diagramPreview__Container--topContainer {
+      width: 100%;
+      height: 60%; }
+      .diagramPreview__Container--topContainer--close {
         display: flex;
-        justify-content: center;
-        align-items: center; }
-    .diagramPreview__container--diagrams {
-      height: 324px;
-      display: grid;
-      grid-template-columns: 1fr repeat(12, 48px) 1fr;
-      grid-gap: 36px; }
-      .diagramPreview__container--diagrams .container {
-        display: grid;
-        grid-column: 2 / span 12;
-        grid-template-columns: repeat(12, 48px);
-        grid-gap: 36px;
-        justify-items: center;
-        align-items: center; }
-        .diagramPreview__container--diagrams .container__circleAndWord {
-          grid-column-start: span 3;
+        flex-direction: row-reverse; }
+        .diagramPreview__Container--topContainer--close div {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          cursor: pointer;
+          background-color: rgba(79, 134, 201, 0.5);
           display: flex;
-          flex-direction: column;
           justify-content: center;
           align-items: center; }
-          .diagramPreview__container--diagrams .container__circleAndWord--alarmCircle {
-            font-size: 18px;
-            font-weight: 700;
+      .diagramPreview__Container--topContainer--diagrams {
+        width: 100%;
+        height: 324px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr); }
+        .diagramPreview__Container--topContainer--diagrams .leftContainer {
+          box-shadow: 0 0 10px #0099b8 inset, 0 0 30px #0099b8;
+          width: 100%;
+          grid-column: span 3; }
+          .diagramPreview__Container--topContainer--diagrams .leftContainer__word {
+            height: 20%;
+            font-size: 21.6px;
+            font-weight: 800;
             color: white;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 144px;
-            width: 144px;
-            -moz-border-radius: 144px;
-            -webkit-border-radius: 144px;
-            border-radius: 144px;
-            background: #e04aee;
-            -webkit-box-shadow: 10px 10px 99px 6px #f038ff;
-            -moz-box-shadow: 10px 10px 99px 6px #bb57c5;
-            box-shadow: 10px 10px 99px 6px #e5b1e9; }
-          .diagramPreview__container--diagrams .container__circleAndWord--circle {
-            font-size: 18px;
-            font-weight: 700;
+            align-items: center; }
+          .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart {
+            height: 80%;
+            display: grid;
+            grid-template-rows: 2fr 2fr; }
+            .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer {
+              grid-column-end: span 1;
+              display: grid;
+              grid-template-columns: repeat(12, 1fr); }
+              .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__type {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: span 3; }
+              .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__bars {
+                grid-column: span 6;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center; }
+                .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__bars .compareBarContainer {
+                  display: grid;
+                  grid-template-columns: repeat(12, 1fr);
+                  width: 100%; }
+                  .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__bars .compareBarContainer__date {
+                    color: white;
+                    height: 42px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    grid-column: span 3; }
+                  .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__bars .compareBarContainer__bars {
+                    grid-column: 4 / span 9;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; }
+                    .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__bars .compareBarContainer__bars__totalBar {
+                      width: 100%;
+                      height: 24px; }
+                      .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__bars .compareBarContainer__bars__totalBar__realBar {
+                        height: 100%;
+                        width: 50%;
+                        background-color: blue; }
+              .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__circleContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: span 3; }
+                .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__circleContainer__circle {
+                  font-size: 15.6px;
+                  font-weight: 700;
+                  color: white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 72px;
+                  width: 72px;
+                  -moz-border-radius: 144px;
+                  -webkit-border-radius: 144px;
+                  border-radius: 144px;
+                  background: #6c12a8;
+                  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; }
+                  .diagramPreview__Container--topContainer--diagrams .leftContainer__barChart .caseContainer__circleContainer__circle:hover {
+                    background-color: #b9e769;
+                    -webkit-box-shadow: 10px 10px 99px 6px #b9e769;
+                    -moz-box-shadow: 10px 10px 99px 6px #b9e769;
+                    box-shadow: 10px 10px 99px 6px #b9e769; }
+        .diagramPreview__Container--topContainer--diagrams .middleContainer {
+          grid-column: 4 / span 4; }
+        .diagramPreview__Container--topContainer--diagrams .rightContainer {
+          box-shadow: 0 0 10px #0099b8 inset, 0 0 30px #0099b8;
+          width: 100%;
+          grid-column: span 3; }
+          .diagramPreview__Container--topContainer--diagrams .rightContainer__word {
+            height: 20%;
+            font-size: 21.6px;
+            font-weight: 800;
             color: white;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 144px;
-            width: 144px;
-            -moz-border-radius: 144px;
-            -webkit-border-radius: 144px;
-            border-radius: 144px;
-            background: #6c12a8;
-            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; }
-            .diagramPreview__container--diagrams .container__circleAndWord--circle:hover {
-              background-color: #b9e769;
-              -webkit-box-shadow: 10px 10px 99px 6px #b9e769;
-              -moz-box-shadow: 10px 10px 99px 6px #b9e769;
-              box-shadow: 10px 10px 99px 6px #b9e769; }
-          .diagramPreview__container--diagrams .container__circleAndWord--word {
-            margin-top: 36px;
-            color: white; }
+            align-items: center; }
+          .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart {
+            height: 80%;
+            display: grid;
+            grid-template-rows: 2fr 2fr; }
+            .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer {
+              grid-column-end: span 1;
+              display: grid;
+              grid-template-columns: repeat(12, 1fr); }
+              .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__type {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: span 3; }
+              .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__bars {
+                grid-column: span 6;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center; }
+                .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__bars .compareBarContainer {
+                  display: grid;
+                  grid-template-columns: repeat(12, 1fr);
+                  width: 100%; }
+                  .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__bars .compareBarContainer__date {
+                    color: white;
+                    height: 42px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    grid-column: span 3; }
+                  .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__bars .compareBarContainer__bars {
+                    grid-column: 4 / span 9;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; }
+                    .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__bars .compareBarContainer__bars__totalBar {
+                      width: 100%;
+                      height: 24px; }
+                      .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__bars .compareBarContainer__bars__totalBar__realBar {
+                        height: 100%;
+                        width: 50%;
+                        background-color: blue; }
+              .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__circleContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: span 3; }
+                .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__circleContainer__circle {
+                  font-size: 15.6px;
+                  font-weight: 700;
+                  color: white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 72px;
+                  width: 72px;
+                  -moz-border-radius: 144px;
+                  -webkit-border-radius: 144px;
+                  border-radius: 144px;
+                  background: #6c12a8;
+                  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; }
+                  .diagramPreview__Container--topContainer--diagrams .rightContainer__barChart .caseContainer__circleContainer__circle:hover {
+                    background-color: #b9e769;
+                    -webkit-box-shadow: 10px 10px 99px 6px #b9e769;
+                    -moz-box-shadow: 10px 10px 99px 6px #b9e769;
+                    box-shadow: 10px 10px 99px 6px #b9e769; }
+    .diagramPreview__Container--bottomContainer {
+      height: 40%;
+      box-shadow: 0 0 10px #5eb8ca inset, 0 0 30px #010f12; }
+      .diagramPreview__Container--bottomContainer .container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); }
 
 /*# sourceMappingURL=style.css.map */
