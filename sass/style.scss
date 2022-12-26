@@ -6,6 +6,11 @@
         box-sizing: border-box;
     }
 
+    @mixin halfWidth {
+        width: 50%;
+        height: 100%;
+    }
+
     @mixin navIcon {
         width: auto;
         height: 2.2*$fontsize;
@@ -32,8 +37,8 @@
 
     @mixin leftAndRightContainer {
         box-shadow: 0 0 10px rgb(0,153,184) inset,0 0 30px rgb(0,153,184);
-        width: 100%;
         grid-column: span 3;
+        height: 100%;
         // background-color: rgb(103, 22, 90);
         &__word{
             height: 20%;
@@ -275,14 +280,14 @@
 
     .badge{ 
         width: 100%;
-        height: 40*$fontsize;
-        margin-top: 10*$fontsize;
+        height: 50*$fontsize;
+        margin-top: 2*$fontsize;
         display: flex;
         justify-content: center;
         align-items: center;
         &__badgeContainer{
-            width: 30*$fontsize;
-            height: 30*$fontsize;
+            width: 40*$fontsize;
+            height: 35*$fontsize;
             & img{
                 width: 100%;
                 height: 100%;
@@ -303,6 +308,7 @@
     }
 
     .diagramPreview{
+        display: none;
         position: fixed;
         width: 100%;
         height: 800*$fontsize;
@@ -317,23 +323,10 @@
             &--topContainer{
                 width: 100%;
                 height: 60%;
-                &--close{
-                    display: flex;
-                    flex-direction: row-reverse;
-                    & div{
-                        width: 2*$fontsize;
-                        height: 2*$fontsize;
-                        border-radius: 50%;
-                        cursor: pointer;
-                        background-color: rgba(79, 134, 201, 0.5);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                }
                 &--diagrams{
                     width: 100%;
-                    height: 27*$fontsize;
+                    height: 100%;
+
                     display: grid;
                     grid-template-columns:  repeat(10,1fr);        
                     & .leftContainer{
@@ -344,6 +337,20 @@
                         
                     }
                     & .rightContainer{
+                        &--close{
+                            display: flex;
+                            flex-direction: row-reverse;
+                            & div{
+                                width: 2*$fontsize;
+                                height: 2*$fontsize;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                background-color: rgba(79, 134, 201, 0.5);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
                         @include leftAndRightContainer();
                     }
                     // & .container{
@@ -389,10 +396,81 @@
             &--bottomContainer{
                 height: 40%;
                 box-shadow: 0 0 10px rgb(94, 184, 202) inset,0 0 30px rgb(1, 15, 18);
-                & .container{
-                    display: grid;
-                    grid-template-columns: repeat(8, 1fr);
-                    
+                @include flexCenter();
+                &  > div:nth-child(1){
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-right: 3*$fontsize;
+                    @include halfWidth();
+                    & .container__pieDiagram{
+                        padding-right: 8*$fontsize;
+                        &__title{
+                            margin-top: 1*$fontsize;
+                            @include flexCenter();
+                            margin-bottom: 1*$fontsize;
+                            color: white;
+                        }
+                        &__pie{
+                            width: 13*$fontsize;
+                            height: 13*$fontsize;
+                            background-color: #b9e769;
+                            border-radius: 50%;
+                        } 
+                    }
+                   
+                    & .container__totalNumber{
+                        width: 30%;
+                        height: 100%;
+                        @include flexCenter();
+                        flex-direction: column;
+                        & h{
+                            font-size: 2*$fontsize;
+                            color: white;
+                        }
+                        & p{
+                            font-size: 4*$fontsize; 
+                            color: white;
+                        }
+                        
+                        
+                    }          
+                }
+                &  > div:nth-child(2){
+                    display: flex;
+                    padding-left: 3*$fontsize;
+                    @include halfWidth();
+                    & .container__pieDiagram{
+                        padding-left: 8*$fontsize;
+                        &__title{
+                            margin-top: 1*$fontsize;
+                            @include flexCenter();
+                            margin-bottom: 1*$fontsize;
+                            color: white;
+                        }
+                        &__pie{
+                            width: 13*$fontsize;
+                            height: 13*$fontsize;
+                            background-color: #b9e769;
+                            border-radius: 50%;
+                        } 
+                    }
+                   
+                    & .container__totalNumber{
+                        width: 30%;
+                        height: 100%;
+                        @include flexCenter();
+                        flex-direction: column;
+                        & h{
+                            font-size: 2*$fontsize;
+                            color: white;
+                        }
+                        & p{
+                            font-size: 4*$fontsize; 
+                            color: white;
+                        }
+                        
+                        
+                    }      
                 }
 
                

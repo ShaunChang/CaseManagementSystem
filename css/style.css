@@ -142,14 +142,14 @@ body {
 
 .badge {
   width: 100%;
-  height: 480px;
-  margin-top: 120px;
+  height: 600px;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
   align-items: center; }
   .badge__badgeContainer {
-    width: 360px;
-    height: 360px; }
+    width: 480px;
+    height: 420px; }
     .badge__badgeContainer img {
       width: 100%;
       height: 100%;
@@ -163,6 +163,7 @@ body {
     transform: translateY(-3.6px); }
 
 .diagramPreview {
+  display: none;
   position: fixed;
   width: 100%;
   height: 9600px;
@@ -177,27 +178,15 @@ body {
     .diagramPreview__Container--topContainer {
       width: 100%;
       height: 60%; }
-      .diagramPreview__Container--topContainer--close {
-        display: flex;
-        flex-direction: row-reverse; }
-        .diagramPreview__Container--topContainer--close div {
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          cursor: pointer;
-          background-color: rgba(79, 134, 201, 0.5);
-          display: flex;
-          justify-content: center;
-          align-items: center; }
       .diagramPreview__Container--topContainer--diagrams {
         width: 100%;
-        height: 324px;
+        height: 100%;
         display: grid;
         grid-template-columns: repeat(10, 1fr); }
         .diagramPreview__Container--topContainer--diagrams .leftContainer {
           box-shadow: 0 0 10px #0099b8 inset, 0 0 30px #0099b8;
-          width: 100%;
-          grid-column: span 3; }
+          grid-column: span 3;
+          height: 100%; }
           .diagramPreview__Container--topContainer--diagrams .leftContainer__word {
             height: 20%;
             font-size: 21.6px;
@@ -276,8 +265,20 @@ body {
           grid-column: 4 / span 4; }
         .diagramPreview__Container--topContainer--diagrams .rightContainer {
           box-shadow: 0 0 10px #0099b8 inset, 0 0 30px #0099b8;
-          width: 100%;
-          grid-column: span 3; }
+          grid-column: span 3;
+          height: 100%; }
+          .diagramPreview__Container--topContainer--diagrams .rightContainer--close {
+            display: flex;
+            flex-direction: row-reverse; }
+            .diagramPreview__Container--topContainer--diagrams .rightContainer--close div {
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              cursor: pointer;
+              background-color: rgba(79, 134, 201, 0.5);
+              display: flex;
+              justify-content: center;
+              align-items: center; }
           .diagramPreview__Container--topContainer--diagrams .rightContainer__word {
             height: 20%;
             font-size: 21.6px;
@@ -354,9 +355,74 @@ body {
                     box-shadow: 10px 10px 99px 6px #b9e769; }
     .diagramPreview__Container--bottomContainer {
       height: 40%;
-      box-shadow: 0 0 10px #5eb8ca inset, 0 0 30px #010f12; }
-      .diagramPreview__Container--bottomContainer .container {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr); }
+      box-shadow: 0 0 10px #5eb8ca inset, 0 0 30px #010f12;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .diagramPreview__Container--bottomContainer > div:nth-child(1) {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 36px;
+        width: 50%;
+        height: 100%; }
+        .diagramPreview__Container--bottomContainer > div:nth-child(1) .container__pieDiagram {
+          padding-right: 96px; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(1) .container__pieDiagram__title {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+            color: white; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(1) .container__pieDiagram__pie {
+            width: 156px;
+            height: 156px;
+            background-color: #b9e769;
+            border-radius: 50%; }
+        .diagramPreview__Container--bottomContainer > div:nth-child(1) .container__totalNumber {
+          width: 30%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(1) .container__totalNumber h {
+            font-size: 24px;
+            color: white; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(1) .container__totalNumber p {
+            font-size: 48px;
+            color: white; }
+      .diagramPreview__Container--bottomContainer > div:nth-child(2) {
+        display: flex;
+        padding-left: 36px;
+        width: 50%;
+        height: 100%; }
+        .diagramPreview__Container--bottomContainer > div:nth-child(2) .container__pieDiagram {
+          padding-left: 96px; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(2) .container__pieDiagram__title {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+            color: white; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(2) .container__pieDiagram__pie {
+            width: 156px;
+            height: 156px;
+            background-color: #b9e769;
+            border-radius: 50%; }
+        .diagramPreview__Container--bottomContainer > div:nth-child(2) .container__totalNumber {
+          width: 30%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(2) .container__totalNumber h {
+            font-size: 24px;
+            color: white; }
+          .diagramPreview__Container--bottomContainer > div:nth-child(2) .container__totalNumber p {
+            font-size: 48px;
+            color: white; }
 
 /*# sourceMappingURL=style.css.map */
