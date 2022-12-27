@@ -1,200 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<script type="text/javascript">
-    window.onload=function(){
-        const diagramClo=window.document.getElementById("diagramCloser")
-        const badge=window.document.getElementById("badge")
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <script type="text/javascript">
+    window.onload = function () {
+      const diagramClo = window.document.getElementById("diagramCloser");
+      const badge = window.document.getElementById("badge");
+      const diagramPre = document.getElementById("diagramPreview");
 
-        diagramClo.onclick=function(){
-            document.getElementById("diagramPreview").style.display='none'
-        }
-        badge.onclick=function(){
-            document.getElementById("diagramPreview").style.display='flex'
-        }
+     
 
-    }
-</script>
+      badge.onclick = function () {
+        console.log(diagramPre)
+        diagramPre.style.visibility = "visible";
+      };
 
-<body>  
+      diagramClo.onclick = function () {
+        diagramPre.style.visibility = "hidden";
+      };
+      
+    };
+  </script>
+
+  <body>
     <nav class="nav">
-        <div class="nav__logo">
-            <img class="nav__logo--logoImag" src="images/logo.png" alt="logo">
-            <div class="nav__logo--logoWords">卷宗管理系统  &nbsp;|</div>
-            <div class="nav__logo--address">白银市烟草专卖局</div>
-        </div>
-        <div class="nav__login--index">
-            <form action="index.html" >
-                <button><span>登 录</span></button>
-            </form>    
-        </div>
+      <div class="nav__logo">
+        <img class="nav__logo--logoImag" src="images/logo.png" alt="logo" />
+        <div class="nav__logo--logoWords">卷宗管理系统 &nbsp;|</div>
+        <div class="nav__logo--address">--市烟草专卖局</div>
+      </div>
+      <div class="nav__login--index">
+        <form action="index.html">
+          <button><span>登 录</span></button>
+        </form>
+      </div>
     </nav>
 
     <section id="diagramPreview" class="diagramPreview">
-        <div class="diagramPreview__Container">
-
-            <div id="diagramPreview__container" class="diagramPreview__Container--topContainer">
-                <div class="diagramPreview__Container--topContainer--diagrams">
-                   
-                        <div class="leftContainer">
-                            <div class="leftContainer__word">同期相比</div>
-                            <div class="leftContainer__barChart">
-                                <div class="caseContainer">
-                                    <div class="caseContainer__type">行政许可卷</div>
-                                    <div class="caseContainer__bars">
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">去年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">今年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="caseContainer__circleContainer">
-                                        <div class="caseContainer__circleContainer__circle">-229</div>
-                                    </div>
-                                </div>
-                                <div class="caseContainer">
-                                    <div class="caseContainer__type">行政处罚卷</div>
-                                    <div class="caseContainer__bars">
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">去年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">今年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="caseContainer__circleContainer">
-                                        <div class="caseContainer__circleContainer__circle">-229</div>
-                                    </div>
-                                </div>
-                            </div>
+      <div class="diagramPreview__Container">
+        <div
+          id="diagramPreview__container"
+          class="diagramPreview__Container--topContainer"
+>
+          <div class="diagramPreview__Container--topContainer--diagrams">
+            <div class="leftContainer">
+              <div class="leftContainer__word">同期相比</div>
+              <div class="leftContainer__barChart">
+                <div class="caseContainer">
+                  <div class="caseContainer__type">行政许可卷</div>
+                  <div class="caseContainer__bars">
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">去年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
                         </div>
-                        
-                        <div class="middleContainer"> </div>
-                        <div class="rightContainer">
-                            <div class="rightContainer--close">
-                                <div id="diagramCloser">X</div>
-                            </div>
-                            <div class="leftContainer__word">同期相比</div>
-                            <div class="leftContainer__barChart">
-                                <div class="caseContainer">
-                                    <div class="caseContainer__type">行政许可卷</div>
-                                    <div class="caseContainer__bars">
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">去年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">今年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="caseContainer__circleContainer">
-                                        <div class="caseContainer__circleContainer__circle">-229</div>
-                                    </div>
-                                    <div class="caseContainer__circle">
-
-                                    </div>
-                                </div>
-                                <div class="caseContainer">
-                                    <div class="caseContainer__type">行政处罚卷</div>
-                                    <div class="caseContainer__bars">
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">去年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="compareBarContainer">
-                                            <div class="compareBarContainer__date">今年</div>
-                                            <div class="compareBarContainer__bars">
-                                                <div class="compareBarContainer__bars__totalBar">
-                                                    <div class="compareBarContainer__bars__totalBar__realBar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="caseContainer__circleContainer">
-                                        <div class="caseContainer__circleContainer__circle">-229</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                       
-                    <!-- </div> -->
-                   
-                </div>
-            </div>
-    
-            <div class="diagramPreview__Container--bottomContainer">
-                <div class="container">
-                    <div class="container__pieDiagram">
-                        <div class="container__pieDiagram__title"><h2>行政许可卷</h2></div>
-                        <div class="container__pieDiagram__pie"></div>
+                      </div>
                     </div>
-                    
-                    <div class="container__totalNumber"><h>提起行政诉讼</h><p>60起</p></div>
+
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">今年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="caseContainer__circleContainer">
+                    <div class="caseContainer__circleContainer__circle">
+                      -229
+                    </div>
+                  </div>
                 </div>
-                <div class="container">
-                    <div class="container__totalNumber"><h>提起行政投诉</h><p>60起</p></div>
-                    <div class="container__pieDiagram">
-                        <div class="container__pieDiagram__title"><h2>行政处罚卷</h2></div>
-                        <div class="container__pieDiagram__pie"></div>
-                    </div>      
-                    
+                <div class="caseContainer">
+                  <div class="caseContainer__type">行政处罚卷</div>
+                  <div class="caseContainer__bars">
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">去年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">今年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="caseContainer__circleContainer">
+                    <div class="caseContainer__circleContainer__circle">
+                      -229
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
 
+            <div class="middleContainer">
+                <div
+                id="coolBarContainer"
+                style="height: 100%"
+              ></div>
+            </div>
+            <div class="rightContainer">
+              <div class="rightContainer--close">
+                <div id="diagramCloser">X</div>
+              </div>
+              <div class="leftContainer__word">同期相比</div>
+              <div class="leftContainer__barChart">
+                <div class="caseContainer">
+                  <div class="caseContainer__type">行政许可卷</div>
+                  <div class="caseContainer__bars">
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">去年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
 
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">今年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="caseContainer__circleContainer">
+                    <div class="caseContainer__circleContainer__circle">
+                      -229
+                    </div>
+                  </div>
+                  <div class="caseContainer__circle"></div>
+                </div>
+                <div class="caseContainer">
+                  <div class="caseContainer__type">行政处罚卷</div>
+                  <div class="caseContainer__bars">
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">去年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="compareBarContainer">
+                      <div class="compareBarContainer__date">今年</div>
+                      <div class="compareBarContainer__bars">
+                        <div class="compareBarContainer__bars__totalBar">
+                          <div
+                            class="compareBarContainer__bars__totalBar__realBar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="caseContainer__circleContainer">
+                    <div class="caseContainer__circleContainer__circle">
+                      -229
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- </div> -->
+          </div>
         </div>
-        
-    </section>
 
+        <div class="diagramPreview__Container--bottomContainer">
+          <div class="container">
+            <div class="container__pieDiagram">
+              <!-- <div class="container__pieDiagram__piePreview"> -->
+              <!-- <div class="container__pieDiagram__piePreview__type">
+                                <div class="typeContainer">
+                                    <div class="typeContainer__color" style="background-color: red;"></div>
+                                    <p>准予</p>
+                                </div>
+                                <div class="typeContainer">
+                                    <div class="typeContainer__color" style="background-color: orange;"></div>
+                                    <p>不予</p>
+                                </div>
+                                <div class="typeContainer">
+                                    <div class="typeContainer__color" style="background-color: yellow;"></div>
+                                    <p>撤销</p>
+                                </div>
+                                <div class="typeContainer">
+                                    <div class="typeContainer__color" style="background-color: green;"></div>
+                                    <p>核销</p>
+                                </div>
+                                <div class="typeContainer">
+                                    <div class="typeContainer__color" style="background-color: blue;"></div>
+                                    <p>复议</p>
+                                </div>
+                            </div>
+                            <div class="container__pieDiagram__piePreview__pie">
+                                <div id="coolPieContainer" style="height: 100%"></div>
+                            </div> -->
+              <div
+                id="coolPieContainer"
+                class="coolPieContainer"
+                style="height: 100%"
+              ></div>
+
+              <!-- </div> -->
+            </div>
+
+            <div class="container__totalNumber">
+              <h>提起行政诉讼</h>
+              <p>60起</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="container__totalNumber">
+              <h>提起行政投诉</h>
+              <p>60起</p>
+            </div>
+            <div class="container__pieDiagram">
+              <div
+                id="coolPieContainer"
+                class="coolPieContainer"
+                style="height: 100%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="badge">
-        <div class="badge__badgeContainer">
-                <img id="badge" src="images/badge.png" alt="badge">
-        </div>
+      <div class="badge__badgeContainer">
+        <img id="badge" src="images/badge.png" alt="badge" />
+      </div>
     </section>
-</body>
+
+    <script type="text/javascript" src="./js/echarts.min.js"></script>
+
+    <script type="text/javascript">
+      // bar
+      var dom = document.getElementById("coolBarContainer");
+      var myChart1 = echarts.init(dom, null, {
+        renderer: "canvas",
+        useDirtyRect: false,
+      });
+      var app = {};
+
+      var option;
+
+      const posList = [
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "inside",
+        "insideTop",
+        "insideLeft",
+        "insideRight",
+        "insideBottom",
+        "insideTopLeft",
+        "insideTopRight",
+        "insideBottomLeft",
+        "insideBottomRight",
+      ];
+      app.configParameters = {
+        rotate: {
+          min: -90,
+          max: 90,
+        },
+        align: {
+          options: {
+            left: "left",
+            center: "center",
+            right: "right",
+          },
+        },
+        verticalAlign: {
+          options: {
+            top: "top",
+            middle: "middle",
+            bottom: "bottom",
+          },
+        },
+        position: {
+          options: posList.reduce(function (map, pos) {
+            map[pos] = pos;
+            return map;
+          }, {}),
+        },
+        distance: {
+          min: 0,
+          max: 100,
+        },
+      };
+      app.config = {
+        rotate: 90,
+        align: "left",
+        verticalAlign: "middle",
+        position: "insideBottom",
+        distance: 15,
+        onChange: function () {
+          const labelOption = {
+            rotate: app.config.rotate,
+            align: app.config.align,
+            verticalAlign: app.config.verticalAlign,
+            position: app.config.position,
+            distance: app.config.distance,
+          };
+          myChart.setOption({
+            series: [
+              {
+                label: labelOption,
+              },
+              {
+                label: labelOption,
+              },
+              {
+                label: labelOption,
+              },
+              {
+                label: labelOption,
+              },
+            ],
+          });
+        },
+      };
+      const labelOption = {
+        show: true,
+        position: app.config.position,
+        distance: app.config.distance,
+        align: app.config.align,
+        verticalAlign: app.config.verticalAlign,
+        rotate: app.config.rotate,
+        formatter: "{c}  {name|{a}}",
+        fontSize: 16,
+        
+        rich: {
+          name: {},
+        },
+      };
+      option = {
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow",
+          },
+        },
+        legend: {
+          data: ["总数", "行政处罚", "行政许可"],
+          textStyle: {
+              color: "rgba(255, 255, 255, 1)",
+            },
+        },
+        toolbox: {
+          show: true,
+          orient: "vertical",
+          left: "right",
+          top: "center",
+          feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            magicType: { show: true, type: ["line", "bar", "stack"] },
+            restore: { show: true },
+            saveAsImage: { show: true },
+          },
+        },
+        xAxis: [
+          {
+            type: "category",
+            axisTick: { show: false },
+            data: ["2018", "2019", "2020", "2021", "2022"],
+          },
+        ],
+        yAxis: [
+          {
+            type: "value",
+          },
+        ],
+        series: [
+          {
+            name: "总数",
+            type: "bar",
+            barGap: 0,
+            label: labelOption,
+            emphasis: {
+              focus: "series",
+            },
+            data: [320, 332, 301, 334, 390],
+          },
+          {
+            name: "行政许可",
+            type: "bar",
+            label: labelOption,
+            emphasis: {
+              focus: "series",
+            },
+            data: [220, 182, 191, 234, 290],
+          },
+          {
+            name: "行政处罚",
+            type: "bar",
+            label: labelOption,
+            emphasis: {
+              focus: "series",
+            },
+            data: [150, 232, 201, 154, 190],
+          },
+        ],
+      };
+
+      if (option && typeof option === "object") {
+        myChart1.setOption(option);
+      }
+
+      window.addEventListener("resize1", myChart1.resize);
+
+      // pie
+      var dom = document.getElementsByClassName("coolPieContainer");
+
+      Array.prototype.forEach.call(dom, function (element) {
+        console.log(element);
+
+        var myChart = echarts.init(element, null, {
+          renderer: "canvas",
+          useDirtyRect: false,
+        });
+        var app = {};
+
+        var option;
+
+        option = {
+          title: {
+            text: "行政处罚卷",
+            left: "center",
+            textStyle: {
+              color: "rgba(255, 255, 255, 1)",
+            },
+          },
+          textStyle: {
+            color: "rgba(255, 255, 255, 1)",
+            textShadowColor: "transparent",
+          },
+          tooltip: {
+            show: "false",
+            trigger: "item",
+          },
+          legend: {
+            orient: "vertical",
+            left: "left",
+            textStyle: {
+              color: "rgba(255, 255, 255, 1)",
+            },
+          },
+          series: [
+            {
+              name: "Access From",
+              type: "pie",
+              radius: "50%",
+              data: [
+                { value: 1048, name: "准予" },
+                { value: 735, name: "不予" },
+                { value: 580, name: "撤销" },
+                { value: 484, name: "核销" },
+                { value: 300, name: "复议" },
+              ],
+              emphasis: {
+                colorBy: "data",
+              },
+              label: {
+                show: "true",
+                color: "rgba(255, 255, 255, 1)",
+                borderColor: "rgba(0, 0, 0, 1)",
+                distanceToLabelLine: "5",
+              },
+            },
+          ],
+        };
+
+        if (option && typeof option === "object") {
+          myChart.setOption(option);
+        }
+
+        window.addEventListener("resize", myChart.resize);
+      });
+    </script>
+  </body>
 </html>
