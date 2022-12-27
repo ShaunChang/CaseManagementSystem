@@ -6,6 +6,8 @@
         box-sizing: border-box;
     }
 
+    
+
     @mixin halfWidth {
         width: 50%;
         height: 100%;
@@ -269,6 +271,9 @@
                 flex-direction: column;
                 cursor: pointer;
                 transition: all 0.3 ease 0;
+                font-size: 1.6*$fontsize;
+                font-weight: 800;
+                color: white;
             
                 &:hover{
                     box-shadow: 0 0 10px rgb(0,153,184) inset,0 0 30px rgb(0,153,184);
@@ -308,7 +313,8 @@
     }
 
     .diagramPreview{
-        display: none;
+
+        visibility: hidden;
         position: fixed;
         width: 100%;
         height: 800*$fontsize;
@@ -333,6 +339,8 @@
                         @include leftAndRightContainer();
                     }
                     & .middleContainer{
+                        background-color: rgba(0, 0, 0, 0.2);
+                  
                         grid-column: 4 / span 4;
                         
                     }
@@ -400,29 +408,55 @@
                 &  > div:nth-child(1){
                     display: flex;
                     justify-content: flex-end;
-                    padding-right: 3*$fontsize;
                     @include halfWidth();
                     & .container__pieDiagram{
-                        padding-right: 8*$fontsize;
-                        &__title{
-                            margin-top: 1*$fontsize;
-                            @include flexCenter();
-                            margin-bottom: 1*$fontsize;
-                            color: white;
-                        }
-                        &__pie{
-                            width: 13*$fontsize;
-                            height: 13*$fontsize;
-                            background-color: #b9e769;
-                            border-radius: 50%;
-                        } 
+                        // margin-left: 2*$fontsize;
+                        width: 100%;
+                        margin-left: 3*$fontsize;
+                        margin-top: 1*$fontsize;
+                        // &__title{
+                        //     margin-top: 1*$fontsize;
+                        //     @include flexCenter();
+                        //     margin-bottom: 1*$fontsize;
+                        //     color: white;
+                        // }
+                        // &__piePreview{
+                        //     height: 15*$fontsize;
+                        //     width: 35*$fontsize;
+                            // display: flex;
+                            // &__type{
+                            //     margin-top: 1*$fontsize;
+                            //     margin-right: 2.5*$fontsize;
+                            //     & .typeContainer{
+                            //         @include flexCenter();
+                            //         &__color{
+                            //         width: 1*$fontsize;
+                            //         height: 1*$fontsize;
+                            //         margin-right: 1*$fontsize;
+                            //         }
+                            //         & p{
+                            //             color: white;
+                            //         }
+                            //     }
+
+                            // }
+                            // &__pie{
+                            //     width: 13*$fontsize;
+                            //     height: 13*$fontsize;
+                            //     background-color: #b9e769;
+                            //     border-radius: 50%;
+                            // } 
+                        // }
+
                     }
                    
                     & .container__totalNumber{
+                        // background-color: black;
                         width: 30%;
                         height: 100%;
                         @include flexCenter();
                         flex-direction: column;
+                        margin-right: 1*$fontsize;
                         & h{
                             font-size: 2*$fontsize;
                             color: white;
@@ -437,28 +471,15 @@
                 }
                 &  > div:nth-child(2){
                     display: flex;
-                    padding-left: 3*$fontsize;
+                    justify-content: flex-end;
                     @include halfWidth();
-                    & .container__pieDiagram{
-                        padding-left: 8*$fontsize;
-                        &__title{
-                            margin-top: 1*$fontsize;
-                            @include flexCenter();
-                            margin-bottom: 1*$fontsize;
-                            color: white;
-                        }
-                        &__pie{
-                            width: 13*$fontsize;
-                            height: 13*$fontsize;
-                            background-color: #b9e769;
-                            border-radius: 50%;
-                        } 
-                    }
-                   
                     & .container__totalNumber{
+                        // background-color: black;
                         width: 30%;
                         height: 100%;
                         @include flexCenter();
+                        margin-left: 1*$fontsize;
+                        margin-right: 3*$fontsize;
                         flex-direction: column;
                         & h{
                             font-size: 2*$fontsize;
@@ -468,6 +489,47 @@
                             font-size: 4*$fontsize; 
                             color: white;
                         }
+                        
+                        
+                    }      
+                    & .container__pieDiagram{
+                        // margin-left: 2*$fontsize;
+                        width: 100%;
+                        margin-left: 3*$fontsize;
+                        margin-top: 1*$fontsize;
+                        // &__title{
+                        //     margin-top: 1*$fontsize;
+                        //     @include flexCenter();
+                        //     margin-bottom: 1*$fontsize;
+                        //     color: white;
+                        // }
+                        // &__piePreview{
+                        //     height: 15*$fontsize;
+                        //     width: 35*$fontsize;
+                            // display: flex;
+                            // &__type{
+                            //     margin-top: 1*$fontsize;
+                            //     margin-right: 2.5*$fontsize;
+                            //     & .typeContainer{
+                            //         @include flexCenter();
+                            //         &__color{
+                            //         width: 1*$fontsize;
+                            //         height: 1*$fontsize;
+                            //         margin-right: 1*$fontsize;
+                            //         }
+                            //         & p{
+                            //             color: white;
+                            //         }
+                            //     }
+
+                            // }
+                            // &__pie{
+                            //     width: 13*$fontsize;
+                            //     height: 13*$fontsize;
+                            //     background-color: #b9e769;
+                            //     border-radius: 50%;
+                            // } 
+                        // }
                         
                         
                     }      
